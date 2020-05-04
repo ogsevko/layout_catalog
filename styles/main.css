@@ -161,16 +161,14 @@
     color: #00acdb;
     border: 1px solid #00acdb;
     border-radius: 5px; }
-  .card_fs-11px {
-    font-size: 11px;
-    line-height: 13px; }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 html {
-  font-family: "Roboto", Arial, sans-serif; }
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px; }
 
 body,
 h3 {
