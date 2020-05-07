@@ -35,7 +35,9 @@
     display: inline-block;
     line-height: 60px;
     color: black;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .navigation__link:hover {
     color: #00acdb; }
 
@@ -54,19 +56,20 @@
   background-color: #00acdb; }
 
 .main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 48px;
+     -moz-column-gap: 48px;
+          column-gap: 48px;
+  row-gap: 50px;
   margin: 0 auto;
-  width: 944px; }
+  max-width: 944px; }
 
 .card {
   display: -webkit-box;
@@ -84,7 +87,6 @@
           align-items: center;
   width: 200px;
   padding: 30px 14px 15px;
-  margin: 0 48px 50px 0;
   background: white;
   border: 1px solid #f2f2f2;
   border-radius: 5px;
@@ -130,11 +132,11 @@
     background: url(../images/star.svg) center no-repeat; }
   .card__star:last-child {
     margin-right: 0; }
-  .stars--1 .card__star:nth-child(-n+1),
-  .stars--2 .card__star:nth-child(-n+2),
-  .stars--3 .card__star:nth-child(-n+3),
-  .stars--4 .card__star:nth-child(-n+4),
-  .stars--5 .card__star:nth-child(-n+5) {
+  .card__stars--1 .card__star:nth-child(-n+1),
+  .card__stars--2 .card__star:nth-child(-n+2),
+  .card__stars--3 .card__star:nth-child(-n+3),
+  .card__stars--4 .card__star:nth-child(-n+4),
+  .card__stars--5 .card__star:nth-child(-n+5) {
     background: url(../images/star-active.svg) center no-repeat; }
   .card__price-tag {
     font-weight: 700;
@@ -155,7 +157,9 @@
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-    color: white; }
+    color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .card__button:hover {
     background-color: white;
     color: #00acdb;
